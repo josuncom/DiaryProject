@@ -6,9 +6,11 @@ const diaryBox = document.querySelector(".diary-container"),
 
 const DIARY_LS = 'diarys';
 
+
 function filter(diary){
     return diary.id === 1;
 }
+
 
 let diarys = [];
 
@@ -22,12 +24,12 @@ function getDate(){
     diary_date.innerText = `${years}.${months + 1}.${dates}`;
 }
 
+
 function saveDiary(){
     localStorage.setItem(DIARY_LS, JSON.stringify(diarys));
 }
 
 let idNum = 1;
-
 
 function paintDiary(text){
     const li = document.createElement("li");
