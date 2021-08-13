@@ -1,0 +1,35 @@
+span{
+    color : white;
+
+}
+@keyframes cursor {
+    50%{ border-color : transparent;}
+}
+
+.js-about{
+    max-width : 50%;
+    margin-left : 10%;
+    padding-top: 30px;;
+}
+
+.js-about span{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size : 32px;
+    color : white;
+    transition: 0.5s;
+    display: table-cell;
+    vertical-align: middle;
+    animation: cursor 0.5s ease infinite;
+    border-right: .05em solid white;
+}
+
+.js-quote1{
+    max-width : 100%;
+    margin-bottom: 1rem;
+}
+
+.quote-container{
+    padding-top : 100px;
+    padding-left : 100px;
+    font-size : 25px;
+}

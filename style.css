@@ -3,6 +3,7 @@
     right : 10px;
     bottom : 10px;
     font-size : 20px;
+    color : white;
 }
 
 .diary-container{
@@ -16,6 +17,7 @@
 
 .date{
     font-size: 20px;
+    color : white;
 }
 
 .input-container{
