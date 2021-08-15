@@ -1,11 +1,12 @@
 const text = document.querySelector(".js-about span");
-const content = text.innerHTML;
+const content = `당신의 하루를 기록해보세요!`;
 
 let index = 0;
 
 
 function type(){
-    text.textContent += content[index++];
+    while(index != content.length)
+      text.textContent += content[index++];
     
     if(index > content.length)
     {
@@ -14,4 +15,5 @@ function type(){
     }
 }
 
-setInterval(type, 300);
+type();
+//setInterval(type, 300);

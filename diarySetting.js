@@ -4,6 +4,12 @@ const diaryBox = document.querySelector(".diary-container"),
       submit_btn = document.querySelector(".submit-btn")
       diaryList = document.querySelector(".diaryList");
 
+const date = new Date(),
+      years = date.getFullYear(),
+      months = date.getMonth(),
+      dates = date.getDate();
+
+
 const DIARY_LS = 'diarys';
 
 
@@ -14,12 +20,7 @@ function filter(diary){
 
 let diarys = [];
 
-function getDate(){
-    const date = new Date();
-    const years = date.getFullYear();
-    const months = date.getMonth();
-    const dates = date.getDate();
-    
+function getDate(){    
     console.log(`${years}.${months + 1}.${dates}`);
     diary_date.innerText = `${years}.${months + 1}.${dates}`;
 }
@@ -29,13 +30,13 @@ function saveDiary(){
     localStorage.setItem(DIARY_LS, JSON.stringify(diarys));
 }
 
-let idNum = 1;
-
+let idNum;
 function paintDiary(text){
     const li = document.createElement("li");
     const span = document.createElement("span");
     const newId = idNum;
-    idNum += 1;
+    
+    idNum = `${years}.${months + 1}.${dates}`;
     span.innerText = text;
     li.appendChild(span);
     li.id = newId;
