@@ -42,3 +42,12 @@
 .sumbit-btn{
     font-size: 100px;
 }
+
+.js-diaryContent{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size : 70px;
+    color : white;
+    transition: 1s;
+    font-weight: 800;
+    text-align: center;
+}

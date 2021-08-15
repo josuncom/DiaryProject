@@ -13,39 +13,26 @@ const date = new Date(),
 const DIARY_LS = 'diarys';
 
 
-function filter(diary){
-    return diary.id === 1;
-}
-
-
 let diarys = [];
 
 function getDate(){    
-    console.log(`${years}.${months + 1}.${dates}`);
     diary_date.innerText = `${years}.${months + 1}.${dates}`;
 }
 
-
 function saveDiary(){
-    localStorage.setItem(DIARY_LS, JSON.stringify(diarys));
+    localStorage.setItem(idNum, JSON.stringify(diarys));
 }
+
 
 let idNum;
 function paintDiary(text){
-    const li = document.createElement("li");
-    const span = document.createElement("span");
     const newId = idNum;
-    
     idNum = `${years}.${months + 1}.${dates}`;
-    span.innerText = text;
-    li.appendChild(span);
-    li.id = newId;
-    
-    diaryList.appendChild(li);
+
     const diaryObj = {
-        text: text,
-        id : newId
+        text
     };
+
     diarys.push(diaryObj);
     saveDiary();
 }
@@ -56,7 +43,6 @@ function handlesumbit(event){
     const currentValue = document.querySelector(".diary-input").value;
     paintDiary(currentValue);
     dirayInput.value = "";
-    
 }
 
 
@@ -70,8 +56,6 @@ function loadDiary(){
         });
     } else{}
 }
-
-
 
 
 function init(){

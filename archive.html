@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Simple Diary</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+        </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock">00:00</div>
+    </div>
+    
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span class="icon"><i class="far fa-edit"></i></span>
+                    <span class="title">Write</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-archive"></i></span>
+                    <span class="title">Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-info"></i></span>
+                    <span class="title">Info</span>
+                </a>
+            </li>          
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-question"></i></span>
+                    <span class="title">Help</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+  
+    
+    <div class="js-diaryContent"></div>
+
+
+    <script src="clock.js"></script>
+    <script src="diarySave.js"></script>
+</body>
+</html>
