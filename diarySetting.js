@@ -33,7 +33,7 @@ function paintDiary(text){
         text
     };
 
-    diarys.push(diaryObj);
+    diarys.push(diaryObj[text]);
     saveDiary();
 }
 

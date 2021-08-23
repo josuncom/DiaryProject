@@ -5,7 +5,7 @@ const date = new Date(),
       years = date.getFullYear(),
       months = date.getMonth(),
       dates = date.getDate();
-      
+
 let todayDate = `${years}.${months + 1}.${dates}`;
 
 function bringDiary(){
